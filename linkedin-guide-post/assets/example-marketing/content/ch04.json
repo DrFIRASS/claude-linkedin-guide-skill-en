@@ -1,0 +1,70 @@
+{
+  "num": 4,
+  "title": "Brand, message and offers",
+  "subtitle": "Say clearly what you do, in your voice, and sell it simply",
+  "intro": "A good offer that's poorly explained doesn't sell. Neither does a beautiful brand without a clear offer. In this chapter, you work with Claude to build your value proposition, your brand voice guide and a simple lineup of offers, then bring it all together in a foundation Claude reuses for every piece of copy.",
+  "framework": {
+    "name": "The brand foundation method",
+    "steps": [
+      {
+        "t": "Write the promise",
+        "d": "Put into one sentence the concrete result your client gets, who it's for, and what makes you credible to promise it."
+      },
+      {
+        "t": "Define your voice",
+        "d": "Describe your tone with real examples: the words you use, the ones you ban and what you never say."
+      },
+      {
+        "t": "Structure your offers",
+        "d": "Organize your offers into a simple lineup: an entry offer, a core offer and, if needed, a premium offer."
+      },
+      {
+        "t": "Build the foundation",
+        "d": "Bring promise, voice and offers together in a single document that Claude checks before writing anything for you."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The value proposition in 3 versions",
+      "use": "When you can't explain what you do in one sentence.",
+      "prompt": "You are a copywriter who specializes in service offers. My business: [WHAT YOU DO]. My audience: [YOUR ICP]. The main result I deliver: [RESULT]. My proof: [TESTIMONIAL, EXPERIENCE OR METHOD]. Write 3 value propositions: one very factual, one focused on the problem avoided, one focused on the result. Each version includes a headline of 12 words max and a subheadline of 25 words max. Not allowed: jargon, superlatives, numbers I didn't provide. End with the one you would choose and why."
+    },
+    {
+      "title": "The brand voice guide",
+      "use": "When you've already written copy that sounds like you.",
+      "prompt": "I'm attaching copy I wrote that sounds like me: [POSTS, EMAILS, SALES PAGES]. Analyze it like a linguist. Produce a brand voice guide with: 4 personality traits written as “we are… but not…”, my usual sentence length, my recurring expressions, words to ban, how I open and close, and a table of 5 examples of “avoid” versus “instead.” The guide must fit on one page so it can serve as a reference."
+    },
+    {
+      "title": "The offer architect",
+      "use": "To clarify your lineup of offers and your prices.",
+      "prompt": "Act as an offer consultant for freelancers and small businesses. My current offers: [LIST OF YOUR OFFERS AND PRICES]. Before suggesting anything, ask me 5 questions, one at a time, about: the time each offer takes me, what my clients buy most, what they ask for that I don't sell, my capacity limits and my revenue goal. Then suggest a 3-tier lineup in a table: name, who it's for, promise, content, format, price range to test, role in the lineup. Also tell me what to remove or merge."
+    },
+    {
+      "title": "The brand guardian",
+      "use": "Before you publish, to check that a piece of copy sounds like you.",
+      "prompt": "You are the guardian of my brand. Here is my voice guide: [PASTE YOUR GUIDE OR NAME THE PROJECT FILE]. Here is the copy to review: [YOUR TEXT]. Score it from 1 to 10 on three criteria: clarity of the promise, consistency with my voice, alignment with my offers. Quote every sentence that sounds off, explain why in one line and suggest a rewrite. Don't rewrite the whole text, only the parts that need fixing. Present the result as a list."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: your reusable brand foundation",
+    "where": "A Claude Project, then a Skill",
+    "steps": [
+      "Attach five to ten pieces of copy that sound like you and run “The brand voice guide.”",
+      "Write your promise with the first prompt, giving it your ICP sheet from chapter 3.",
+      "Clarify your lineup with “The offer architect” and sum up your offers in a one-page table.",
+      "Combine promise, voice and offers in a “brand foundation” document added to your Project.",
+      "Turn this foundation into a Skill so Claude applies it whenever you ask for marketing copy."
+    ]
+  },
+  "checklist": [
+    "My value proposition makes sense without me explaining it out loud.",
+    "It says who it's for, what result and why they should believe me.",
+    "My voice guide has real examples, not just adjectives.",
+    "I have a list of words I never use.",
+    "Each offer has a clear role in my lineup.",
+    "A stranger quickly knows which offer fits their case."
+  ],
+  "mistake": "Common mistake: describing your voice with adjectives like “professional but friendly.” Claude can't do anything with that. Give it real copy and examples of what you refuse to say.",
+  "tip": "Dr. Firas's tip: when you fix a piece of copy from Claude, ask it to add the rule to your voice guide. Week after week, it really starts writing like you."
+}

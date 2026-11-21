@@ -1,0 +1,70 @@
+{
+  "num": 6,
+  "title": "SEO, AEO and AI visibility",
+  "subtitle": "Write pages that Google shows and AI assistants quote.",
+  "intro": "Your customers no longer just type keywords into Google. They ask full questions to ChatGPT, Claude, Perplexity or Google's AI Overviews. To get cited, your page has to answer clearly, be well structured and offer information nobody else has.",
+  "framework": {
+    "name": "The 4R method",
+    "steps": [
+      {
+        "t": "Research the questions",
+        "d": "List the real questions your customers ask, in their own words, on Google, in forums and on your calls."
+      },
+      {
+        "t": "Respond up front",
+        "d": "Put a clear two- or three-sentence answer right under each heading, before the details and examples."
+      },
+      {
+        "t": "Restructure the page",
+        "d": "Break the page into question headings, lists, tables and an FAQ so an AI can find the right passage."
+      },
+      {
+        "t": "Reveal what's new",
+        "d": "Add what only you have: numbers from your business, your own tests, screenshots, a dated and reasoned opinion."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The question map",
+      "use": "Before you write a page or an article on a topic.",
+      "prompt": "You are an SEO and AEO consultant. My business: [YOUR BUSINESS]. My audience: [TARGET AUDIENCE]. Page topic: [TOPIC]. Use web search to find the questions my audience really asks about this topic (Google, forums, Reddit, customer reviews). Give me a 15-row table with 4 columns: the question as a customer would phrase it, the intent (learn, compare, buy), estimated competition (low, medium, high) and the right content type. End with the 5 questions to tackle first, with one sentence explaining each choice."
+    },
+    {
+      "title": "The citation test",
+      "use": "To find out why AI assistants never cite one of your pages.",
+      "prompt": "Here is the text of a page on my site: [PASTE THE TEXT]. Put yourself in the place of an AI assistant answering the question “[TARGET QUESTION]”. Tell me honestly whether you would cite this page, and why. Then list the problems from most to least serious: buried answer, vague sentences, no original data, confusing structure, outdated information. For each problem, quote the passage and give a rewritten version. Don't flatter the page. I want to fix it."
+    },
+    {
+      "title": "A ready-to-publish FAQ",
+      "use": "To add a structured FAQ at the bottom of a key page.",
+      "prompt": "You are a web writer who specializes in structured content. Using my page: [PAGE TEXT] and these customer questions: [LIST OF QUESTIONS], write an 8-question FAQ. Rules: each answer opens with a sentence that answers directly, followed by 2 sentences of detail at most, with no jargon. Do not invent anything that is not in my sources: mark gaps with [MISSING INFO]. Deliver the FAQ as text first, then the matching FAQPage JSON-LD markup in a code block."
+    },
+    {
+      "title": "Your data, your original content",
+      "use": "To become a source that AI assistants and journalists quote.",
+      "prompt": "I want to publish content based on my own data so I get cited as a source. My industry: [INDUSTRY]. Data I have: [EXAMPLES: CRM EXPORT, SURVEY RESULTS, SUPPORT TICKETS, TESTS]. Before suggesting anything, ask me 5 questions to understand what this data can really prove. Wait for my answers. Then suggest 3 study angles, each with: the title, the question it answers, the numbers to calculate and the method to explain so it stays credible."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: a page AI assistants can cite",
+    "where": "A Claude Project with web search turned on",
+    "steps": [
+      "Create an “SEO” Project and add your customer profile, your offer and your best pages as files.",
+      "Run “The question map” with web search and pick one priority question.",
+      "Paste your current page into “The citation test” to see what holds it back.",
+      "Ask for the rewritten version in an Artifact: direct answer, question headings and FAQ.",
+      "Publish, then ask the question every month to ChatGPT, Claude and Perplexity and note who gets cited."
+    ]
+  },
+  "checklist": [
+    "The main answer appears in the first two sentences of the page.",
+    "Each H2 heading is a question your customer really asks.",
+    "The page has at least one piece of data, test or example that is yours.",
+    "The author's name, role and last-updated date are visible.",
+    "A short FAQ answers objections and comparison questions.",
+    "Your robots.txt file doesn't accidentally block search engine and AI crawlers."
+  ],
+  "mistake": "Common mistake: writing for a keyword instead of a question. A page that circles the topic without ever giving a clear answer gives an AI assistant nothing to cite.",
+  "tip": "Dr. Firas's tip: list your 10 key questions in a spreadsheet and ask them every month to three AI assistants. The competing pages that get cited show you the format and depth to aim for."
+}

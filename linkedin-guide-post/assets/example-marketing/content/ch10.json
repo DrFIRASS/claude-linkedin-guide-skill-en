@@ -1,0 +1,70 @@
+{
+  "num": 10,
+  "title": "Analytics, reporting and automation",
+  "subtitle": "Read your numbers, get a clear weekly report, automate repeat work.",
+  "intro": "You have numbers everywhere: website, social media, CRM, email. The problem isn't having them, it's knowing what to do with them. Claude reads your exports, explains what changed and prepares your weekly report. Once the routine is stable, you automate it with Skills, connectors, Claude Code or n8n.",
+  "framework": {
+    "name": "The numbers-to-action method",
+    "steps": [
+      {
+        "t": "Pick 5 metrics",
+        "d": "Keep only the numbers tied to your goals: qualified visits, leads, sales, acquisition cost, retention."
+      },
+      {
+        "t": "Read them with Claude",
+        "d": "Attach your CSV or Excel exports and ask what changed, why it might have changed and what is still uncertain."
+      },
+      {
+        "t": "Decide on an action",
+        "d": "Every report ends with one or two concrete actions to test the following week, each with an owner."
+      },
+      {
+        "t": "Automate the routine",
+        "d": "Once the report is stable, turn it into a Skill, then connect your data with a connector or n8n."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "Read an export without mistakes",
+      "use": "When you have a file full of numbers and no idea what to conclude.",
+      "prompt": "You are a marketing analyst who explains things simply. Here is my export: [CSV OR EXCEL FILE] for the period [PERIOD], compared with [PREVIOUS PERIOD]. My main goal: [GOAL]. Calculate the changes in the key metrics and present them in a table. Then explain the 3 most important changes and their possible causes, separating what is certain from what isn't. Don't draw any conclusion the data doesn't support. Add a chart in an Artifact."
+    },
+    {
+      "title": "The one-page weekly report",
+      "use": "Every Monday, for you, your team or your client.",
+      "prompt": "Write my weekly marketing report from this data: [NUMBERS OR FILES]. Reader: [EXECUTIVE, TEAM OR CLIENT]. Required structure: 1. Summary in 3 sentences. 2. Table of the 5 metrics with value, change and trend. 3. What worked. 4. What worked less well. 5. Two actions for next week, each with an owner. Factual tone, no unnecessary adjectives, one page max. Clearly flag any missing data instead of guessing it."
+    },
+    {
+      "title": "The anomaly detector",
+      "use": "When a number swings sharply and you don't know why.",
+      "prompt": "Here are my numbers for the last 12 weeks: [PASTE YOUR DATA]. Spot the unusual weeks, up or down. For each one, suggest several possible explanations (seasonality, tracking issue, campaign, site change, public holiday) and tell me how to check which one is right. Also flag numbers that contradict each other, for example more conversions than clicks. Answer in a table: week, metric, gap observed, possible explanations, check to run."
+    },
+    {
+      "title": "Choose how to automate",
+      "use": "When your report is stable and you want to stop doing it by hand.",
+      "prompt": "I want to automate my marketing reporting. Tools I use: [EXAMPLES: GA4, HUBSPOT, GOOGLE SHEETS, META]. My technical level: [BEGINNER OR INTERMEDIATE]. First, ask me 5 questions about my data, how often the report goes out and who reads it. Wait for my answers. Then compare 3 options in a table: a Claude Skill with connectors, Claude Code with a scheduled task, an n8n workflow. Columns: what to install, difficulty, limits, who it's for. Recommend one option and give me its first 5 steps."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: a weekly report ready every Monday",
+    "where": "A Claude Skill + connectors, or n8n",
+    "steps": [
+      "Build the report by hand for three weeks with “The one-page weekly report” to lock in the format.",
+      "Turn the prompt, the structure and your metric definitions into a Claude Skill.",
+      "Connect your sources with connectors, for example Google Drive for your tracking spreadsheet.",
+      "Schedule it to run every Monday with a scheduled task, Claude Code or an n8n workflow.",
+      "Review every report before sharing it and fix the Skill as soon as a number is misread."
+    ]
+  },
+  "checklist": [
+    "You track 5 metrics at most, each tied to a specific goal.",
+    "Each metric has a written definition and a single source.",
+    "The periods you compare have the same length and a similar context.",
+    "The report clearly separates facts, hypotheses and decisions.",
+    "Each report ends with one or two actions, each with an owner.",
+    "A human checks the numbers before anything is sent automatically."
+  ],
+  "mistake": "Common mistake: automating a report nobody reads, or one whose format changes every week. You're just automating the mess. Stabilize the report by hand first, then automate it.",
+  "tip": "Dr. Firas's tip: add a file to your Skill that defines each metric in one sentence. Claude will stop mixing up sessions, visits and visitors, and your reports will stay comparable."
+}

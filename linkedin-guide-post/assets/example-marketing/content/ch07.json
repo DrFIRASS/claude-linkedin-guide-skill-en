@@ -1,0 +1,70 @@
+{
+  "num": 7,
+  "title": "Social media and LinkedIn",
+  "subtitle": "Post useful content often, in your own voice, without chasing likes.",
+  "intro": "On LinkedIn, what lasts is value and real experience, not tricks to game the algorithm. Claude helps you find ideas, write clear hooks, structure carousels and keep a steady pace. Your stories and your voice stay yours: Claude just helps you shape them.",
+  "framework": {
+    "name": "The real story method",
+    "steps": [
+      {
+        "t": "Start from real life",
+        "d": "Every post starts from a real situation: a client, a test, a mistake or a lesson you learned this week."
+      },
+      {
+        "t": "Hook in two lines",
+        "d": "The first two lines set up the topic and the tension, with no overblown promise and no fake suspense."
+      },
+      {
+        "t": "Give before you ask",
+        "d": "The post delivers the method or the lesson. Any link goes in the first comment, never in the post."
+      },
+      {
+        "t": "Keep the pace",
+        "d": "Pick a number of posts per week you can keep up for three months, and prep them in batches."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The real story idea bank",
+      "use": "When you don't know what to post this week.",
+      "prompt": "You are my LinkedIn content assistant. I am a [YOUR JOB] and I speak to [TARGET AUDIENCE]. First, ask me 8 specific questions about my past month: clients, mistakes, tests, memorable conversations, numbers from my business, opinions I stand by. Wait for my answers. Then turn them into 10 post ideas in a table: idea, real story it starts from, lesson for the reader, suggested format (text, carousel, image). Drop any idea that doesn't have a real experience behind it."
+    },
+    {
+      "title": "Hooks without tricks",
+      "use": "When your post is written but the opening falls flat.",
+      "prompt": "Here is the draft of my LinkedIn post: [DRAFT]. Suggest 10 hooks of 2 lines max, split across 5 types: observation, admitted mistake, number from my business (only if it's in the draft), contrarian idea, honest question. Not allowed: overblown promises, fake suspense, asking people to comment, like or tag. For each hook, explain in one sentence what makes people want to keep reading. End by telling me which one you would pick, and why."
+    },
+    {
+      "title": "An 8-slide carousel",
+      "use": "To turn a method or a lesson learned into a carousel.",
+      "prompt": "You are a LinkedIn carousel designer. Topic: [TOPIC]. My method or experience: [YOUR NOTES]. Create an 8-slide carousel in a 4-column table: number, title (8 words max), text (25 words max), visual idea. Slide 1: the concrete promise. Slides 2 to 7: one idea per slide, each with an example from my notes. Slide 8: the recap. Then write the post text that goes with the carousel: 120 words max, short sentences, no request for engagement."
+    },
+    {
+      "title": "The pre-publish review",
+      "use": "Right before you publish, to keep your own voice.",
+      "prompt": "Read this post as a demanding reader from my audience [TARGET AUDIENCE]: [POST]. Flag sentences that are too long, jargon, parts that sound fake or too “AI-written”, forced calls for engagement and promises without proof. Score the hook, clarity and usefulness out of 10, with a reason for each score. Then suggest a corrected version that keeps my words and my tone. If the post contains a link, pull it out and set it aside for the first comment."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: a week of posts in one session",
+    "where": "A “LinkedIn” Claude Project with top posts",
+    "steps": [
+      "Add your 10 best posts to the Project as files, plus one page on your tone, topics and banned words.",
+      "Run “The real story idea bank” at the start of the week and keep the ideas that speak to you.",
+      "Write each draft from your notes, generate the hooks and pick the best one yourself.",
+      "Run each post through the review, then rewrite by hand anything that doesn't sound like you.",
+      "Schedule the posts, prepare the first comment with the link and reply to comments the same day."
+    ]
+  },
+  "checklist": [
+    "The post starts from a real experience you lived.",
+    "The first two lines make people want to read on, with no false promise.",
+    "No sentence asks people to like, comment a keyword or tag someone.",
+    "Sentences are short and the text breathes, with one idea per paragraph.",
+    "Any link is ready for the first comment, not in the post.",
+    "You reread and rewrote by hand anything that doesn't sound like you."
+  ],
+  "mistake": "Common mistake: posting an AI-generated post as is. People spot it fast: sentences too smooth, perfect lists, no story. You lose more credibility than you save in time.",
+  "tip": "Dr. Firas's tip: turn your LinkedIn writing rules into a Claude Skill: tone, length, banned words, link in the comment. Claude then applies them to every post without you repeating them."
+}

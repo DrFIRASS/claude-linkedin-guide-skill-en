@@ -1,0 +1,41 @@
+{
+  "toc_00": {"t": "Before you start", "st": "Set up Claude in 10 minutes"},
+  "toc_plan": {"t": "Your 30-day action plan", "st": "Where to start, week by week"},
+  "setup_kicker": "CHAPTER 00 · BEFORE YOU START",
+  "setup_title": ["Set up Claude", "in 10 minutes"],
+  "setup_intro": "A Claude that knows nothing about your brand or your clients gives you generic answers. Before you use a single prompt from this guide, give it your context once. After that, every conversation starts from there.",
+  "setup_steps": [
+    {"t": "Create a “Marketing” Project", "d": "A Project groups your conversations, files and instructions. Everything you put in it is read in every new conversation of the Project."},
+    {"t": "Write your brand sheet with Claude", "d": "Run prompt 1 on the right. Claude asks its questions, then writes the sheet. Save it and add it to the Project files."},
+    {"t": "Paste the Project instructions", "d": "Copy prompt 2 into the Project instructions. Also add your best posts, your sales page and a few client reviews."}
+  ],
+  "setup_prompts": [
+    {"title": "Prompt 1 · Your brand sheet", "use": "Run it once, inside the Project", "prompt": "You are a marketing director. Help me write the brand sheet for [YOUR BUSINESS NAME]. Ask me your questions one at a time (10 at most): what I sell, to whom, the problem I solve, my prices, my competitors, what makes me different, my tone, the words I refuse to use, my channels, my goal for the next 90 days. Wait for my answer before each new question. At the end, write a one-page sheet with clear headings, in a document I can download."},
+    {"title": "Prompt 2 · The Project instructions", "use": "Paste it into the Project instructions", "prompt": "You are my marketing team. Before every answer, rely on the brand sheet and the Project files. Write in English, address the reader as “you”, use short sentences and no jargon. Never invent a number, a client review or a result: if information is missing, ask for it or write [MISSING INFO]. When I ask for a deliverable, first suggest a short outline, then produce the final version. Always point out what you assumed."}
+  ],
+  "features_title": "THE FEATURES USED IN THIS GUIDE",
+  "features": [
+    {"t": "Projects:", "d": "your context (instructions and files) shared by every conversation."},
+    {"t": "Artifacts:", "d": "documents, tables and pages created next to the conversation, to edit and download."},
+    {"t": "Web search:", "d": "Claude looks for recent sources and cites them."},
+    {"t": "Skills:", "d": "reusable instructions Claude loads on its own when the task matches."},
+    {"t": "Connectors:", "d": "Google Drive, Gmail, Notion, HubSpot, Slack… to work on your real data."}
+  ],
+  "plan_title": ["30 days to put", "Claude to work"],
+  "plan_intro": "You don't have to do everything. One week, one block, a few actions. By the end of the month, Claude knows your brand, your content ships every week and you read your numbers without losing your Sunday.",
+  "plan30": [
+    {"t": "The foundations", "chapters": "Chapters 00, 01, 02", "actions": ["Create the “Marketing” Project and brand sheet", "Set 1 measurable goal for 90 days", "Gather 20 client reviews or messages", "Have Claude analyze 3 competitors"]},
+    {"t": "The message", "chapters": "Chapters 03, 04", "actions": ["Describe your ideal client on one page", "Pick your positioning sentence", "Rewrite your value proposition", "Update your bio and your sales page"]},
+    {"t": "The content", "chapters": "Chapters 05, 06, 07", "actions": ["Define 3 or 4 content pillars", "Plan 4 weeks of posts", "Turn 1 long piece into 10 formats", "Add a clear FAQ to your main page"]},
+    {"t": "Conversion and tracking", "chapters": "Chapters 08, 09, 10", "actions": ["Write your welcome sequence", "Have your sales page audited", "Run 1 A/B test with a single hypothesis", "Turn your weekly report into a Skill"]}
+  ],
+  "end_title": "Your turn",
+  "end_paras": [
+    "This guide does not replace your judgment. Claude writes fast, analyzes fast and never gets tired. You know your clients, you decide and you check.",
+    "Start with page 03. Set up your Project. Then pick a single chapter this week and apply it all the way.",
+    "The rest will come faster than you think."
+  ],
+  "end_signature": "AI, automation and content creation for curious beginners",
+  "end_url": "getguide.io",
+  "legal": "Independent free guide, made by Dr. Firas. It is not published or endorsed by Anthropic. Claude is a trademark of Anthropic. The features mentioned are those available in November 2026 and may vary with your plan."
+}

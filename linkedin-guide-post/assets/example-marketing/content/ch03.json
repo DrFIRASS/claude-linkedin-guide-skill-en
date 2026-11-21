@@ -1,0 +1,70 @@
+{
+  "num": 3,
+  "title": "ICP and positioning",
+  "subtitle": "Know exactly who you're talking to and why they choose you",
+  "intro": "Talking to everyone means convincing no one. Here, you use Claude to describe your ideal client based on your real clients, split your market into segments, choose the one that matters, then write a positioning your competitors can't copy by changing two words.",
+  "framework": {
+    "name": "The flagship client method",
+    "steps": [
+      {
+        "t": "Start from your best",
+        "d": "List your 5 to 10 most profitable and easiest-to-work-with clients, then look for what they truly have in common."
+      },
+      {
+        "t": "Split the market",
+        "d": "Group potential clients by situation, urgent problem and ability to pay, rather than by age or industry alone."
+      },
+      {
+        "t": "Pick one segment",
+        "d": "Keep the segment where your offer solves the most urgent problem and where you can reach people easily."
+      },
+      {
+        "t": "Take a stand",
+        "d": "Spell out why this segment should choose you over the solutions it already uses today."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The ideal client profile",
+      "use": "When you already have a few clients and want to find what they share.",
+      "prompt": "You are a marketing strategist. Here is a description of my best clients: [FOR EACH ONE: BUSINESS, SIZE, STARTING PROBLEM, REASON FOR BUYING, RESULT ACHIEVED]. Identify the common points that really matter in the buying decision, not demographic details. Then write an ICP sheet with these sections: situation, urgent problem, what they've already tried, buying trigger, selection criteria, objections, where to find them. Flag the sections where my data is too thin to draw a conclusion."
+    },
+    {
+      "title": "The segment matrix",
+      "use": "To compare several possible audiences and choose methodically.",
+      "prompt": "Act as a strategy consultant. My offer: [YOUR OFFER]. I see these possible segments: [SEGMENT 1], [SEGMENT 2], [SEGMENT 3], [SEGMENT 4]. Create a table that scores each segment from 1 to 5 on: urgency of the problem, ability to pay, ease of reaching them, intensity of competition, fit with my expertise. Add a Total column and a “To verify” column. Justify each score in one sentence. Recommend a priority segment and a backup segment."
+    },
+    {
+      "title": "The positioning workshop",
+      "use": "To build your positioning statement step by step.",
+      "prompt": "You are a positioning expert. Help me write the positioning statement for [YOUR COMPANY NAME]. First ask me 6 questions, one at a time, about: my audience, their problem, the solutions they use today, what makes me different, the proof I have, what I refuse to do. Then suggest 3 statements following this template: “For (audience) who (problem), (brand) is the (category) that (benefit), unlike (alternative).” For each statement, give its strength and its weakness."
+    },
+    {
+      "title": "The copy-paste test",
+      "use": "To check that your positioning isn't interchangeable.",
+      "prompt": "Here is my positioning: [YOUR POSITIONING STATEMENT]. Here are 3 competitors: [COMPETITOR 1], [COMPETITOR 2], [COMPETITOR 3]. Run this test: replace my name with each competitor's name and say whether the statement is still true for them. If so, quote the words that make it interchangeable. Then suggest 2 sharper rewrites, based on something concrete they can't claim. Answer in a table, then conclude in 3 lines."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: your go-to ICP sheet",
+    "where": "A Claude Project + your CRM (HubSpot or CSV)",
+    "steps": [
+      "Export your client list from your CRM or spreadsheet, or connect HubSpot to Claude.",
+      "Run “The ideal client profile” on your best clients, not on the whole list.",
+      "Compare your possible segments with “The segment matrix” and pick just one.",
+      "Build your statement with “The positioning workshop,” then run it through “The copy-paste test.”",
+      "Save the ICP sheet and positioning in your Project for all your future copy."
+    ]
+  },
+  "checklist": [
+    "My ICP sheet describes a situation and a problem, not just an age.",
+    "I know where to find my ideal client, online and offline.",
+    "I chose a single priority segment, and I stand by it.",
+    "I know the solutions my audience uses today.",
+    "My statement becomes false if I put a competitor's name in it.",
+    "I have concrete proof to back up what makes me different."
+  ],
+  "mistake": "Common mistake: letting Claude invent a persona with a first name, an age and hobbies. It looks nice, but with no link to your real clients, it doesn't help you sell.",
+  "tip": "Dr. Firas's tip: paste your ICP sheet into your project instructions. Every piece of copy Claude writes after that starts from your real client, without you having to remind it."
+}

@@ -1,0 +1,70 @@
+{
+  "num": 2,
+  "title": "Market research",
+  "subtitle": "Listen to your clients and your market before you decide anything",
+  "intro": "Your best marketing ideas are already written down somewhere: in your client reviews, in comments on your competitors' pages, in questions asked on forums. Claude reads these sources faster than you, sorts them and pulls out the exact words your market uses. Your job: give it real material and check what it draws from it.",
+  "framework": {
+    "name": "The market listening loop",
+    "steps": [
+      {
+        "t": "Collect the raw material",
+        "d": "Gather client reviews, email threads, comments and forum questions in a single file, without filtering them."
+      },
+      {
+        "t": "Sort the exact quotes",
+        "d": "Have each sentence sorted by theme: problem, desire, objection or buying trigger, keeping the clients' exact words."
+      },
+      {
+        "t": "Compare competitors",
+        "d": "Look at what your competitors promise, what their clients complain about and what nobody is saying yet."
+      },
+      {
+        "t": "Decide on your angles",
+        "d": "Keep the three findings that come up most and turn them into concrete decisions for your offer and message."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The quote extractor",
+      "use": "When you have a file of reviews, comments or client emails.",
+      "prompt": "You are a customer experience researcher. I'm attaching a file with reviews and messages from clients of [YOUR BUSINESS]. Analyze all of it. Produce a table with these columns: Theme, Type (problem, desire, objection or trigger), Exact quote in quotation marks, Frequency (rare, regular, very frequent). Never rephrase the quotes. Then list the 10 expressions my clients use most often that I could reuse word for word in my copy."
+    },
+    {
+      "title": "The competitor watch",
+      "use": "With web search turned on, to map out your competitors.",
+      "prompt": "Use web search. I sell [YOUR OFFER] to [YOUR AUDIENCE] in [COUNTRY OR REGION]. Find 5 direct competitors or alternatives my audience considers. For each one, give in a table: name, main promise (quoted from their website), listed price if public, target audience, strength, common client complaint if you find one. Cite the source of every piece of information and write “not found” rather than guessing. End with 3 spaces that no one clearly owns in this market."
+    },
+    {
+      "title": "The client interview guide",
+      "use": "Before you call a client or prospect to interview them.",
+      "prompt": "Act as a client interview specialist. I'm going to interview [CLIENT TYPE] who recently bought [YOUR OFFER]. My goal: understand [WHAT YOU WANT TO LEARN]. Write a 30-minute interview guide in 4 parts: context before the purchase, trigger, hesitations, result achieved. For each part, suggest 3 open questions about past facts, never about future intentions. Add 5 questions to avoid because they lead the answer, with a better way to phrase each one."
+    },
+    {
+      "title": "The devil's advocate",
+      "use": "When you think you understand your market and want to check.",
+      "prompt": "Here are my conclusions about my market: [YOUR CONCLUSIONS]. Here is the data I'm basing them on: [SUMMARY OR ATTACHED FILE]. Play devil's advocate. For each conclusion, say whether the data truly supports it, partly supports it or doesn't support it at all. Point out possible biases, such as a sample that's too small or only happy clients. Then suggest one small action to test each doubtful conclusion in less than a week. Answer as a numbered list."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: your market summary in one afternoon",
+    "where": "Research + file analysis",
+    "steps": [
+      "Export your client reviews, emails and comments into a CSV, Excel or PDF file.",
+      "Attach the file to Claude and run “The quote extractor” to get the table of themes.",
+      "Turn on Research and run “The competitor watch” on your market.",
+      "Ask Claude to combine both results in a one-page Artifact: findings, quotes, opportunities.",
+      "Run this summary through “The devil's advocate,” then save the final version in your marketing Project."
+    ]
+  },
+  "checklist": [
+    "My quotes are my clients' exact words, not rephrased versions.",
+    "I analyzed both happy and unhappy clients.",
+    "I opened the source of every fact about a competitor.",
+    "I know the 3 objections that come up most often.",
+    "I spotted at least one need my competitors ignore.",
+    "My conclusions lead to decisions, not just observations."
+  ],
+  "mistake": "Common mistake: asking Claude “what do my clients think?” without giving it any data. It answers with plausible guesses, not with the real voice of your market.",
+  "tip": "Dr. Firas's tip: keep a “client quotes” file in your Project and paste in every striking sentence you hear on a call or read in a comment. It quickly becomes your best source of copy."
+}

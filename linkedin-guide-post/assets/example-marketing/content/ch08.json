@@ -1,0 +1,70 @@
+{
+  "num": 8,
+  "title": "Email, sequences and CRM",
+  "subtitle": "Send each contact the right email for their stage, with Claude's help.",
+  "intro": "A subscriber who just signed up doesn't expect the same email as a loyal customer or a lead who went quiet two months ago. Lifecycle marketing simply means matching your messages to each contact's stage. With Claude and your CRM, you write your sequences, segment your list and prep your follow-ups.",
+  "framework": {
+    "name": "The 4-stage lifecycle",
+    "steps": [
+      {
+        "t": "Welcome",
+        "d": "A short welcome sequence that delivers what you promised, introduces who you are and gets them a first win."
+      },
+      {
+        "t": "Segment",
+        "d": "Sort your contacts by stage and behavior: new subscriber, interested, customer, inactive."
+      },
+      {
+        "t": "Follow up",
+        "d": "Plan useful follow-ups for unanswered quotes, ended trials and contacts who went quiet."
+      },
+      {
+        "t": "Retain",
+        "d": "After the purchase, help your customer succeed, ask for feedback, then offer the logical next step at the right time."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The welcome sequence",
+      "use": "When you launch a newsletter or a new signup form.",
+      "prompt": "You are an email marketing specialist for small businesses. My offer: [YOUR OFFER]. What subscribers get when they sign up: [SIGNUP GIFT]. My audience: [TARGET AUDIENCE]. Write a 5-email welcome sequence over 10 days. Start with a table: send day, goal of the email, 2 possible subject lines, preview text. Then write all 5 emails in full: 150 words max each, one call to action per email, a direct, warm and conversational tone."
+    },
+    {
+      "title": "Follow-ups that don't nag",
+      "use": "For an unanswered quote or a contact who went quiet.",
+      "prompt": "I need to follow up with [CONTACT TYPE: QUOTES SENT, ENDED TRIALS, INACTIVE CUSTOMERS]. Context: [SITUATION AND TIME SINCE LAST CONTACT]. Before writing, ask me 4 questions to understand the likely reason for the silence. Wait for my answers. Then suggest 3 spaced-out follow-ups, each with a different angle: useful information, a simple question, a polite way out. Each follow-up is under 80 words, says when to send it and never guilt-trips the contact."
+    },
+    {
+      "title": "Segment from an export",
+      "use": "When your contact list is one big catch-all.",
+      "prompt": "Here is the CSV export of my contacts: [ATTACHED FILE]. The columns are: [LIST OF COLUMNS]. My business: [YOUR BUSINESS]. Analyze the file and suggest 4 to 6 useful segments. For each segment, give in a table: name, exact filter rule based on the existing columns, number of contacts, message to send them first. Then flag missing or inconsistent data that gets in the way of segmentation. Don't invent any column and don't assume any data that isn't in the file."
+    },
+    {
+      "title": "Audit an existing sequence",
+      "use": "When a sequence is already running but the results disappoint.",
+      "prompt": "Here is my current sequence: [EMAILS WITH THEIR DELAYS] and its results per email: [OPENS, CLICKS, UNSUBSCRIBES, REPLIES]. Act as a demanding email marketing expert. Find the email where readers drop off and explain the possible causes. Critique the subject lines, length and calls to action, without holding back. End with a table of the 5 changes to make, ranked by expected impact and effort, then rewrite the weakest subject line in 3 versions."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: your welcome sequence with HubSpot",
+    "where": "A Claude Project + HubSpot connector",
+    "steps": [
+      "Connect HubSpot to Claude and ask for a summary of your contacts by lifecycle stage.",
+      "Add your offer and your signup gift to the Project, then run “The welcome sequence”.",
+      "Review the emails in an Artifact, adjust the tone and check every link and every promise.",
+      "Copy the sequence into HubSpot or your email tool and set the delays between sends.",
+      "After a month, export the results and run the sequence audit to fix the weakest email."
+    ]
+  },
+  "checklist": [
+    "The first email delivers what was promised at signup right away.",
+    "Each email has one goal and one call to action.",
+    "Subject lines are clear and promise nothing the email doesn't deliver.",
+    "Every contact has an up-to-date lifecycle stage in your CRM.",
+    "Follow-ups stop as soon as the contact replies or buys.",
+    "The unsubscribe link is visible and works."
+  ],
+  "mistake": "Common mistake: sending the same newsletter to your whole list. The new subscriber, the loyal customer and the cold lead all get a message that doesn't really speak to any of them.",
+  "tip": "Dr. Firas's tip: ask Claude to write each email for one real person, in their specific situation. Only generalize after that: the tone stays human and concrete."
+}

@@ -1,0 +1,70 @@
+{
+  "num": 1,
+  "title": "Marketing strategy",
+  "subtitle": "A clear 90-day plan before you write a single line",
+  "intro": "Without a strategy, every post and every campaign heads in a different direction. In this chapter, you use Claude like a demanding business partner: it helps you take an honest look at where you stand, set a measurable goal, pick three priorities and turn it all into a 90-day plan you follow week by week.",
+  "framework": {
+    "name": "The PACE 90 method",
+    "steps": [
+      {
+        "t": "Pinpoint where you stand",
+        "d": "Gather what works, what's stuck and your current numbers so you start from your real situation, not an ideal one."
+      },
+      {
+        "t": "Aim for one goal",
+        "d": "Pick a single measurable 90-day goal tied to your revenue, and write it in one sentence."
+      },
+      {
+        "t": "Choose three priorities",
+        "d": "Keep three projects at most that directly serve the goal, and write down what you're stopping to make room."
+      },
+      {
+        "t": "Execute week by week",
+        "d": "Break the plan into weekly actions and do a quick review every Friday to adjust what isn't working."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The quick diagnosis",
+      "use": "Before planning, to know exactly where you're starting from.",
+      "prompt": "You are a marketing director who works with small businesses. Before suggesting anything, ask me 8 questions, one at a time, to understand my business: [YOUR BUSINESS], my current clients, my channels, my monthly budget of [BUDGET] and the time I have available. Wait for my answer before each new question. At the end, summarize my situation in a 3-column table: What works, What's stuck, What's missing. Finish with the 2 problems to tackle first, with one sentence of reasoning for each."
+    },
+    {
+      "title": "From wish to goal",
+      "use": "When your goal is vague, like “get more clients.”",
+      "prompt": "Act as a straight-talking business coach. My current goal is: [YOUR VAGUE GOAL]. My starting point: [CURRENT NUMBERS: REVENUE, NUMBER OF CLIENTS, LEADS PER MONTH]. Suggest 3 versions of this goal, each one measurable, with a 90-day deadline and realistic given my starting point. For each version, give: the metric to track, the target value, what it requires from me each week and the main risk. Present everything in a table, then recommend one version and explain your choice in 3 sentences."
+    },
+    {
+      "title": "The 12-week plan",
+      "use": "Once your goal is set, to get a week-by-week plan.",
+      "prompt": "You are the marketing lead in a small team of [TEAM SIZE] people. 90-day goal: [GOAL]. Chosen priorities: [PRIORITY 1], [PRIORITY 2], [PRIORITY 3]. Time available: [HOURS PER WEEK]. Build a 12-week plan in a table with these columns: Week, Priority, Concrete action, Deliverable, Estimated time, Metric. Group the weeks into 3 phases of 30 days and give each phase a name. Never go over the available time, and flag any week that is overloaded."
+    },
+    {
+      "title": "The plan stress test",
+      "use": "Before you start, to spot the weak points in your plan.",
+      "prompt": "Here is my 90-day marketing plan: [PASTE YOUR PLAN]. Play the role of a skeptical investor who has seen many plans fail. List the 5 most serious weaknesses, from most to least risky. For each one, give: why it's a problem, the signal that will show it's going off track, and a concrete fix. Be blunt, no compliments. End with the one action to cut from the plan if I run short on time, and explain why."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: your 90-day plan in a Claude Project",
+    "where": "A Claude Project + an Artifact",
+    "steps": [
+      "Create a “Marketing 2026” Project and add your business overview, offers and recent numbers as files.",
+      "Run “The quick diagnosis” and answer the questions without dressing up your situation.",
+      "Turn your wish into a goal with the second prompt, then pick three priorities at most.",
+      "Ask for the 12-week plan in an Artifact so you can review, edit and copy it easily.",
+      "Add the final plan to the Project files so every new conversation starts from it."
+    ]
+  },
+  "checklist": [
+    "My goal fits in one sentence, with a number and a date.",
+    "I track this goal with one main metric.",
+    "I have three priorities at most, not one more.",
+    "I wrote down what I'm stopping for these 90 days.",
+    "Every week of the plan has a concrete action and deliverable.",
+    "The plan fits the time I actually have."
+  ],
+  "mistake": "Common mistake: asking straight away for “a marketing plan.” With no context, Claude gives you a generic plan that works for everyone, so it's useful to no one.",
+  "tip": "Dr. Firas's tip: every Friday, paste your weekly results into the Project and ask Claude what to keep, cut or adjust the following week."
+}

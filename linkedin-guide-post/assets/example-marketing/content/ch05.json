@@ -1,0 +1,70 @@
+{
+  "num": 5,
+  "title": "Content strategy",
+  "subtitle": "Clear pillars, a realistic calendar and one piece that becomes ten",
+  "intro": "Posting every day with no direction wears you out fast. With Claude, you define content pillars tied to your offers, build a calendar you can actually keep up with, then turn each core piece of content into ten formats. You cover fewer topics, but you get much more out of each one.",
+  "framework": {
+    "name": "The 1-to-10 method",
+    "steps": [
+      {
+        "t": "Define your pillars",
+        "d": "Pick three or four themes tied to your offer and your ICP's problems, so every piece of content moves someone closer to a sale."
+      },
+      {
+        "t": "Set a pace you can keep",
+        "d": "Choose a pace you can hold for three months, even during a busy week, rather than an ideal one."
+      },
+      {
+        "t": "Create one core piece",
+        "d": "Each week, create one rich main piece: a video, article, podcast or case study drawn from your real experience."
+      },
+      {
+        "t": "Turn it into ten",
+        "d": "Cut that piece into ten short formats suited to each channel, without starting from scratch for ideas."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The content pillars",
+      "use": "When you're starting out, to know what to talk about and why.",
+      "prompt": "You are a content strategist. Here is my brand foundation: [PASTE YOUR VALUE PROPOSITION, ICP AND OFFERS]. Suggest 4 content pillars. For each one, give in a table: pillar name, ICP problem it addresses, offer it leads to, 5 specific topic ideas, best format and goal (attract, convince or convert). Check that the whole set covers all three goals. Drop any idea with no link to my offers and tell me which ones you dropped."
+    },
+    {
+      "title": "The 4-week calendar",
+      "use": "Every month, to plan without spreading yourself too thin.",
+      "prompt": "Act as a managing editor. My pillars: [YOUR PILLARS]. My channels: [YOUR CHANNELS]. Time available for content: [HOURS PER WEEK]. Events or launches this month: [KEY DATES]. Build a 4-week calendar in a table: date, channel, pillar, topic, format, type (core piece or spin-off), estimated time. Plan only one core piece per week, with the rest as spin-offs. If my time isn't enough, remove posts instead of cramming them in."
+    },
+    {
+      "title": "One piece, ten formats",
+      "use": "After each core piece, to repurpose it with little effort.",
+      "prompt": "You are a content repurposing specialist. I'm attaching [YOUR TRANSCRIPT, ARTICLE OR NOTES] on the topic [TOPIC]. My audience: [YOUR ICP]. My voice guide is in the Project. Turn this content into 10 spin-offs: 3 short posts, 1 carousel of 7 slides, 1 script for a 45-second short video, 1 thread, 1 email, 2 quotes to turn into images, 1 FAQ with 5 questions. Use only ideas found in the source. For each spin-off, note the source passage you used."
+    },
+    {
+      "title": "The tough editor-in-chief",
+      "use": "Before you publish, to strengthen a core piece of content.",
+      "prompt": "You are an editor-in-chief who rejects average content. Here is my draft: [YOUR CONTENT]. My audience: [YOUR ICP]. Assess it with these questions: Does the reader learn something new? Is my personal experience visible? Does the hook make people want to keep reading? Does every paragraph serve the topic? Then list the 3 most useful changes, in order of priority, with a sample rewrite for each. End with a score out of 10 and what's missing to reach 9."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: from one core piece to ten formats",
+    "where": "A Claude Project + Artifacts",
+    "steps": [
+      "Add your brand foundation, voice guide and pillars to the files of a “Content” Project.",
+      "Record your core piece, then attach its transcript or your text to a new conversation in the Project.",
+      "Run “One piece, ten formats” and ask for the result in an Artifact so you can review it all at once.",
+      "Edit each spin-off in your own voice and add a personal experience where one is missing.",
+      "Copy the final versions into your scheduling tool and slot them into your monthly calendar."
+    ]
+  },
+  "checklist": [
+    "Each pillar is tied to at least one of my offers.",
+    "My calendar fits the time I actually have.",
+    "I produce only one core piece per week, and I make the most of it.",
+    "Each spin-off reuses an idea found in the source.",
+    "I reread every text and added my voice before publishing.",
+    "I know which goal each piece serves: attract, convince or sell."
+  ],
+  "mistake": "Common mistake: asking Claude for thirty post ideas with no pillars or source. You get generic topics everyone is already posting, with no link to what you sell.",
+  "tip": "Dr. Firas's tip: record yourself for ten minutes explaining a topic out loud, then give the transcript to Claude. Your real voice and examples make the ten spin-offs sound far more natural."
+}

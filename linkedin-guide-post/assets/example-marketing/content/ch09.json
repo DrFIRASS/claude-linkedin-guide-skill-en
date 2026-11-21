@@ -1,0 +1,70 @@
+{
+  "num": 9,
+  "title": "Ads, landing pages and testing",
+  "subtitle": "Find ad angles, fix your landing page and test one thing at a time.",
+  "intro": "In advertising, most money is lost by guessing. Claude helps you come up with varied angles, write variations, audit your landing page like a visitor in a hurry and frame clear test hypotheses. The decisions come from your real results, not from gut feelings.",
+  "framework": {
+    "name": "The angle, page, test loop",
+    "steps": [
+      {
+        "t": "Pick the angle",
+        "d": "Start from a customer problem, desire or objection, then turn each angle into several hooks."
+      },
+      {
+        "t": "Match the page",
+        "d": "The landing page repeats the ad's exact promise, with one goal and one button."
+      },
+      {
+        "t": "Write the hypothesis",
+        "d": "Frame each test like this: if I change X to Y, this metric will move, because I observed Z."
+      },
+      {
+        "t": "Test and log",
+        "d": "Change one variable at a time, wait for enough data, then write down the result and what you learned."
+      }
+    ]
+  },
+  "prompts": [
+    {
+      "title": "The ad angle matrix",
+      "use": "Before you build a new campaign.",
+      "prompt": "You are a paid advertising strategist. Product: [PRODUCT]. Audience: [TARGET AUDIENCE]. Main objections: [OBJECTIONS]. Platform: [META, LINKEDIN, GOOGLE...]. Suggest 8 different ad angles: pain, gain, proof, comparison, objection handled, behind the scenes, real urgency, identity. Present them in a table: angle, hook of 10 words max, 40-word primary text, visual idea, the audience it speaks to best. Don't use any number or testimonial I haven't given you."
+    },
+    {
+      "title": "Variations for a creative test",
+      "use": "When an ad is running and you want to know what would make it work better.",
+      "prompt": "Here is my current ad: [AD TEXT AND VISUAL DESCRIPTION]. I want to test only one variable: [HOOK, VISUAL, CALL TO ACTION OR OFFER]. Write 4 variations that change only that variable, with everything else identical. For each variation, state the hypothesis being tested in one sentence. Then add an empty tracking table with these columns: variation, spend, impressions, clicks, conversions, cost per conversion, decision."
+    },
+    {
+      "title": "The landing page audit",
+      "use": "When people click your ad but don't take action on the page.",
+      "prompt": "Act as a visitor from my audience [TARGET AUDIENCE] arriving from this ad: [AD TEXT]. Here is my landing page: [SCREENSHOT OR PAGE TEXT]. First, describe what you understand in 5 seconds, then what makes you hesitate. Then audit the page on 6 points: match with the ad, clarity of the promise, proof, objections, call to action, mobile readability. End with a table: problem, suggested fix, priority (high, medium, low)."
+    },
+    {
+      "title": "A/B test hypotheses",
+      "use": "To decide what to test first on a page or a campaign.",
+      "prompt": "I want to improve the conversion rate of [PAGE OR CAMPAIGN]. Before suggesting tests, ask me 5 questions about my traffic, my current numbers and what my customers say. Wait for my answers. Then suggest 5 hypotheses in this format: “If I change [X] to [Y], then [METRIC] will move, because [OBSERVATION]”. Rank them in a table with possible impact, effort and the traffic needed to reach a conclusion. Tell me which one to launch first and why."
+    }
+  ],
+  "workflow": {
+    "title": "Workflow: from ad angle to A/B test",
+    "where": "A Claude chat with screenshots and a CSV",
+    "steps": [
+      "Run the angle matrix and keep the 3 angles closest to what your customers actually say.",
+      "Have Claude audit your landing page from a mobile screenshot and fix the high priorities first.",
+      "Write the test hypothesis, then generate variations that change only one variable.",
+      "Launch the test in your ad platform with the same budget for each variation.",
+      "At the end, attach the CSV export of the results and ask Claude what they really let you conclude."
+    ]
+  },
+  "checklist": [
+    "The ad's promise and the landing page headline say the same thing.",
+    "The page has one goal and a button visible on mobile without scrolling.",
+    "Each test changes only one variable at a time.",
+    "The hypothesis is written before launch, with the metric to track.",
+    "No number, review or client logo is shown without real proof.",
+    "The test runs long enough that you don't decide based on a few clicks."
+  ],
+  "mistake": "Common mistake: stopping a test after two days because one variation seems to be winning. With too little data, you decide at random and think you learned something.",
+  "tip": "Dr. Firas's tip: keep a test log in a spreadsheet: hypothesis, dates, result, lesson. Add it to your Claude Project so it never suggests a test you've already run."
+}
