@@ -116,7 +116,7 @@ This is what I use every day. You add topics in Notion, Claude does the rest eve
 
 ### 1. Duplicate the Notion template
 
-👉 **[Duplicate the “LinkedIn guide queue” database](https://www.notion.so/41f3d6550fd9811085ded69fcf9f1e59)**
+👉 **[Duplicate the “LinkedIn guide queue” database](https://automatisation.notion.site/41f3d6550fd9811085ded69fcf9f1e59)**
 (“Duplicate” button at the top right of the page)
 
 The database columns:
